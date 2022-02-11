@@ -4,13 +4,7 @@ const app = express()
 const port = 8000
 
 
-app.get('/atualizacao', att.atualizacao);
-
-app.get('/', (req, res) => {
-  res.status(200).json({
-      msg : "Servidor amazon rodando"
-  });
-})
+app.get('/', att.atualizacao);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
